@@ -6,12 +6,20 @@ This is an update with `nix flake` and Japanese (or in general CJK) support.
 
 ## Usage
 
-- Clone the repository and remove `.git`, then `git init`.
-- Change the file name in `flake.nix`.
-- Change [`pandoc` options](https://pandoc.org/MANUAL.html#variables) in `default.yaml`.
-- Add LaTeX header in `header.tex`.
-- Add contents in `slides.md`.
-- `nix build`
+- Initialize Git repository
+    - Clone the repository
+    - Remove `.git`
+    - `git init`.
+- Configure
+    - Modify the file name in `flake.nix`.
+    - Modify [`pandoc` options](https://pandoc.org/MANUAL.html#variables) in `default.yaml`.
+    - Modify LaTeX header in `header.tex`.
+- Add contents
+    - Write slides in `slides.md`.
+    - Put assets in `assets`
+- Build
+    - `git add .`
+    - `nix build`
 
 The result document will be in `./result`.
 

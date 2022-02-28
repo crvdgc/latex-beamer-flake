@@ -19,6 +19,7 @@
       xetex
       beamer beamertheme-metropolis
       pgfopts fira xkeyval fontaxes fancyvrb
+      booktabs caption # table
       xecjk ctex unicode-math ipaex; # Japanese
     };
     # fix from https://github.com/NixOS/nixpkgs/issues/10008
@@ -27,20 +28,17 @@
         "${tex}/share/texmf/"
       ];
     };
-    src = {
-      header = ./header.tex;
-      config = ./default.yaml;
-      slides = ./slides.md;
-    };
   in rec {
     packages = {
       slides = pkgs.runCommand "latex-beamer-demo" {
         buildInputs = [ pkgs.coreutils tex pkgs.pandoc ];
         FONTCONFIG_FILE = fontsConf;
+        src = ./.;
       } ''
+        cp -r $src/* ./
         mkdir $out
         ${pkgs.pandoc}/bin/pandoc --pdf-engine=xelatex -t beamer \
-          -H ${src.header} ${src.config} ${src.slides} \
+          -H header.tex default.yaml slides.md \
           -o $out/${packages.slides.name}.pdf
       '';
     };

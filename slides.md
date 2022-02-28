@@ -16,10 +16,28 @@ Why *Markdown*?
 
 Why `Beamer`?
 
-- It's nice.
-> - It has incremental bullets.
+>- It's nice.
+>- It has incremental bullets.
 
 # Tests
+
+## Markdown Images
+
+![Markdown Image Example](./assets/img/371px-MaxStirner1.svg.png)
+
+## LaTeX Images
+
+\centering
+\includegraphics[width = 0.2\textwidth]{./assets/img/371px-MaxStirner1.svg.png}
+
+## Table
+
+| コンピュータ | 年代 | メモリ | コア数 | クロック周波数 |
+|:---:|:---|:---|:---|:---|
+| AGC[^1] | 1960s | 4KB | 1 | 0.043MHz |
+| P | 2010s | 6GB | 8 | 2.96GHz |
+
+[^1]: https://history.nasa.gov/computers/Ch2-5.html
 
 ## Mathematical symbols
 
