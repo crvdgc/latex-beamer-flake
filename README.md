@@ -6,7 +6,7 @@ This is an update with `nix flake` and Japanese (or in general CJK) support.
 
 ## Usage
 
-- Clone the repository and remove `.git`.
+- Clone the repository and remove `.git`, then `git init`.
 - Change the file name in `flake.nix`.
 - Change [`pandoc` options](https://pandoc.org/MANUAL.html#variables) in `default.yaml`.
 - Add LaTeX header in `header.tex`.
