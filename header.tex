@@ -1,0 +1,48 @@
+\usepackage{amsmath, amsfonts, amssymb}
+\usetheme{metropolis}
+\usepackage{FiraSans}
+
+% Japanese support
+\usepackage[utf8]{inputenc}
+\usepackage{xeCJK}
+\setCJKmainfont{IPAexMincho}
+\setCJKsansfont{IPAexGothic}
+\setCJKmonofont{IPAexGothic}
+% \setmainfont{ipamp.ttf}
+% \setsansfont{ipagp.ttf}
+% \setmonofont{ipag.ttf}
+
+% Add TOC at the beginning of each section
+\AtBeginSection[]{\begin{frame}
+        \frametitle{Outline}
+        \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]
+    \end{frame}
+}
+
+% Toggle text font between Sans Serif & Serif (math mode font unchanged)
+%   \renewcommand{\familydefault}{}           # sans serif
+%   \renewcommand{\familydefault}{\sfdefault} # serif
+\renewcommand{\familydefault}{\sfdefault}
+
+% Dummy command to enable markdown inside raw latex
+% example:
+%   \tex{
+%     \begin{center}
+%   }
+%   Markdown *here*.
+%   \tex{
+%     \end{center}
+%   }
+\newcommand\tex[1]{#1}
+
+% useful symbols
+\newcommand{\heart}{\ensuremath\heartsuit}
+\newcommand{\coheart}{\rotatebox[origin=c]{180}{\heart}}
+
+\newcommand{\dialabel[1]}{\ensuremath\langle#1\rangle}
+\newcommand{\boxlabel[1]}{\ensuremath[#1]}
+
+\definecolor{DeepBlue}{RGB}{0, 0, 78}
+\setbeamercolor{title}{fg=DeepBlue}
+\setbeamercolor{frametitle}{bg=DeepBlue}
+\setbeamercolor{structure}{bg=DeepBlue}
