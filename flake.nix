@@ -2,8 +2,7 @@
   description = ''
     LaTeX Beamer Demo
 
-    Based on https://ubikium.gitlab.io/portfolio/2019-11-30-maintainable-markdown-beamer.html
-
+    Based on https://ubikium.gitlab.io/portfolio/latex-beamer-flake.html .
   '';
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-21.05;
