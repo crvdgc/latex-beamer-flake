@@ -37,7 +37,9 @@
       } ''
         cp -r $src/* ./
         mkdir $out
-        ${pkgs.pandoc}/bin/pandoc --pdf-engine=xelatex -t beamer \
+        ${pkgs.pandoc}/bin/pandoc \
+          --pdf-engine=xelatex \
+          -t beamer \
           -H header.tex default.yaml slides.md \
           -o $out/${packages.slides.name}.pdf
       '';

@@ -1,8 +1,8 @@
 ---
 title: 日本語テスト
-subtitle: a survey
+subtitle: a showcase
 author: Liu Yuxi
-date: 2019-11-29
+date: 2022-04-27
 ---
 
 # Introduction
@@ -58,3 +58,34 @@ data Maybe a = Just a | Nothing
 \begin{center}
   \emph{Hello, World!}
 \end{center}
+
+## Two columns showcase
+
+\columnsbegin
+\column{.5\textwidth}
+
+\footnotesize
+
+```haskell
+-- code font size is smaller
+-- with \footnotesize
+class Functor f where
+  fmap :: (a -> b) -> f a -> f b
+  (<$) :: a -> f b -> f a
+```
+
+\normalsize
+
+\column{.5\textwidth}
+
+Related packages
+
+- (base) Prelude
+- (base) Data.Functor
+- (base) Control.Monad
+
+\columnsend
+
+\extrafootnote{https://wiki.haskell.org/Functor}
+\extrafootnote{Footnote without marker}
+
