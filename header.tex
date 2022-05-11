@@ -55,11 +55,9 @@
 \setbeamercolor{structure}{bg=DeepBlue}
 
 % A footnote that does not have a marker, nor does it change the counter.
-% https://tex.stackexchange.com/a/544121
-\newcommand\extrafootnote[1]{%
-    \bgroup
-    \renewcommand\thefootnote{\fnsymbol{footnote}}%
-    \renewcommand\thempfootnote{\fnsymbol{mpfootnote}}%
-    \footnotetext[0]{#1}%
-    \egroup
+% https://tex.stackexchange.com/a/347247
+\newcommand{\extrafootnote}[1]{
+    \renewcommand{\thefootnote}{}
+    \footnotetext{\hspace{-8pt}\scriptsize#1}
+    \renewcommand{\thefootnote}{\arabic{footnote}}
 }
